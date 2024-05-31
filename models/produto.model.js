@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
+const Usuario = require('./usuario.model');
 
 const produtoSchema = new mongoose.Schema({
-    _id:{ type: Number, 
+    _id:{ type: mongoose.Schema.Types.ObjectId, 
         required: [true, "O id do produto é obrigatório"]},
 
     nome: {
@@ -26,6 +27,16 @@ const produtoSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
+    _idusuario: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: Usuario,
+        required: [true, "O id do usuário é obrigatório"]
+    },
+    nome_usuario: {
+        type: String,
+        ref: Usuario,
+        required: [true, "O nome do usuário é obrigatório"]
+    }
 }, { versionKey: false });
 
 const Produto = mongoose.model('produto', produtoSchema);

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const usuarioSchema = new mongoose.Schema({
-    _id:{ type: Number, 
+    _id:{ type: mongoose.Schema.Types.ObjectId, 
         required: [true, "O id do usuario é obrigatório"]},
 
     nome: {
@@ -19,7 +19,7 @@ const usuarioSchema = new mongoose.Schema({
     criado_em: {
         type: Date,
         default: Date.now
-    },
+    }
 },{ versionKey: false });
 
 const Usuario = mongoose.model('usuario', usuarioSchema);
