@@ -83,3 +83,12 @@ Exemplo para alteração de produto:
 ## Documentação
 
 Este README.md fornece todas as informações necessárias para configurar o ambiente, executar a aplicação e realizar operações CRUD. Se você tiver alguma dúvida, sinta-se à vontade para abrir uma issue.
+
+## Integrantes do grupo
+
+- Felipe do Nascimento Terem
+- Felipe Maniga Collado
+- Guilherme Ayres Camarini
+- Henrique Martins da Luz
+- João Pedro Loureiro Loureço
+- Marlon Alves Ferreira
